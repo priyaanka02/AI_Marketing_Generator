@@ -116,15 +116,6 @@ Audience: Professionals
 
 ---
 
-## 💭 **What People Are Saying**
-
-> *"This tool literally 10x'd my content creation speed. Now I actually have time to touch grass."* ⭐⭐⭐⭐⭐
-
-> *"Went from spending 3 hours on copy to 3 minutes. The ROI is unmatched."* ⭐⭐⭐⭐⭐
-
-> *"Finally, AI that understands the assignment. My conversion rates doubled."* ⭐⭐⭐⭐⭐
-
----
 
 ## 🛠️ **Behind the Scenes**
 
