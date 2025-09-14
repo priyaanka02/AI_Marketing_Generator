@@ -13,6 +13,7 @@ APP_TITLE = "🚀 AI Marketing Generator"
 APP_DESCRIPTION = "Generate compelling marketing copy and stunning visuals for your products"
 
 # Generation Settings
-DEFAULT_MODEL = "gpt-4"
+DEFAULT_MODEL = "gpt-4o-mini"  # This works on free tier
 MAX_TOKENS = 500
 TEMPERATURE = 0.7
+
