@@ -60,7 +60,7 @@ def main():
                 image_result = image_gen.generate_image(image_prompt)
                 
                 if image_result["success"]:
-                    st.image(image_result["image"], caption=f"{product_name} - AI Generated", use_column_width=True)
+                    st.image(image_result["image"], caption=f"{product_name} - AI Generated", use_container_width=True)
                 else:
                     st.error(f"Image generation failed: {image_result['error']}")
     
@@ -83,3 +83,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
