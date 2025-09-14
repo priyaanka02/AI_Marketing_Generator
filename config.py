@@ -1,12 +1,12 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# API Configuration - FREE GEMINI!
+# API Configuration - ALL FREE!
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-STABILITY_API_KEY = os.getenv("STABILITY_API_KEY", "")
+HF_TOKEN = os.getenv("HF_TOKEN", "")  # Hugging Face token
+MODELSLAB_API_KEY = os.getenv("MODELSLAB_API_KEY", "")  # ModelsLab key
 
 # App Configuration
 APP_TITLE = "🚀 AI Marketing Generator"
