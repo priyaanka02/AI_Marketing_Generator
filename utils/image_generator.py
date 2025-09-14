@@ -1,30 +1,26 @@
 import requests
+import base64
 from PIL import Image
 from io import BytesIO
-import urllib.parse
+import config
 
 class ImageGenerator:
     def __init__(self):
-        self.base_url = "https://image.pollinations.ai/prompt/"
+        self.api_url = "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5"
+        self.headers = {"Authorization": f"Bearer {config.HF_TOKEN}"}
         
     def generate_image(self, prompt: str) -> dict:
-        """Generate image using Pollinations AI - 100% FREE, no API key needed"""
+        """Generate image using Hugging Face's FREE Stable Diffusion API"""
+        
+        payload = {
+            "inputs": prompt,
+        }
         
         try:
-            # Clean and encode the prompt
-            clean_prompt = urllib.parse.quote(prompt)
-            
-            # Pollinations API parameters for better quality
-            params = "?width=512&height=512&model=flux&enhance=true"
-            
-            # Build the full URL
-            image_url = f"{self.base_url}{clean_prompt}{params}"
-            
-            # Get the image directly
-            response = requests.get(image_url, timeout=30)
+            response = requests.post(self.api_url, headers=self.headers, json=payload)
             
             if response.status_code == 200:
-                # Convert response to PIL Image
+                # Convert response bytes to PIL Image
                 image = Image.open(BytesIO(response.content))
                 return {"success": True, "image": image}
             else:
