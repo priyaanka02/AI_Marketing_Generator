@@ -6,27 +6,21 @@ import config
 
 class ImageGenerator:
     def __init__(self):
-        self.api_key = config.STABILITY_API_KEY
-        self.base_url = "https://api.stability.ai/v2beta/stable-image/generate/ultra"
+        self.api_url = "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5"
+        self.headers = {"Authorization": f"Bearer {config.HF_TOKEN}"}
         
     def generate_image(self, prompt: str) -> dict:
-        """Generate image using Stable Diffusion API"""
+        """Generate image using Hugging Face's FREE Stable Diffusion API"""
         
-        headers = {
-            "authorization": f"Bearer {self.api_key}",
-            "accept": "image/*"
-        }
-        
-        data = {
-            "prompt": prompt,
-            "output_format": "png",
+        payload = {
+            "inputs": prompt,
         }
         
         try:
-            response = requests.post(self.base_url, headers=headers, files={"none": ''}, data=data)
+            response = requests.post(self.api_url, headers=self.headers, json=payload)
             
             if response.status_code == 200:
-                # Convert response to PIL Image
+                # Convert response bytes to PIL Image
                 image = Image.open(BytesIO(response.content))
                 return {"success": True, "image": image}
             else:
