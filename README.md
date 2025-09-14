@@ -2,7 +2,7 @@
 
 > **Generate fire marketing copy + stunning visuals in seconds. No setup, no hassle, just results.** 💯
 
-**[🎯 Try It Live →](https://your-deployed-url-here)**  
+**[🎯 Try It Live →](https://aimarketinggenerator-f5wfqmzecpbyyjappqttvpt.streamlit.app/#product-visual)**  
 *Click above and start creating. It's that simple.*
 
 ---
@@ -146,7 +146,7 @@ Built with cutting-edge AI that's **completely free**:
 
 ## 🎯 **Ready to Transform Your Marketing?**
 
-**[🚀 Start Creating Now →](https://your-deployed-url-here)**
+**[🚀 Start Creating Now →](https://aimarketinggenerator-f5wfqmzecpbyyjappqttvpt.streamlit.app/#product-visual)**
 
 *No signup required. No credit card. No API setup. Just pure productivity.*
 
